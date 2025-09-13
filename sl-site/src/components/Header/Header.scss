@@ -1,0 +1,89 @@
+// Header Component Styles
+@import '../../styles/variables.scss';
+
+.company-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: $header-height-mobile;
+  background-color: transparent;
+  pointer-events: none; // Allow clicks through to content below
+  
+  // Responsive height adjustments
+  @include tablet-only {
+    height: $header-height-tablet;
+  }
+  
+  @include desktop-only {
+    height: $header-height-desktop;
+  }
+  
+  .company-button {
+    // Typography
+    font-family: $font-family-heading;
+    font-weight: $font-weight-black;
+    color: $color-primary;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    // Responsive font sizing using clamp for smooth scaling
+    font-size: $header-font-size-mobile;
+    
+    @include tablet-only {
+      font-size: $header-font-size-tablet;
+    }
+    
+    @include desktop-only {
+      font-size: $header-font-size-desktop;
+    }
+    
+    // Layout and interaction
+    pointer-events: auto; // Re-enable clicks on the button itself
+    padding: $spacing-sm $spacing-md;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    // Smooth interactions
+    transition: transform $duration-fast $ease-out;
+    @include gpu-accelerated;
+    
+    // Interaction states
+    &:hover {
+      transform: scale(1.02);
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+    
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 4px;
+      border-radius: $border-radius-sm;
+    }
+    
+    // Accessibility - high contrast mode
+    @media (prefers-contrast: high) {
+      border: 2px solid $color-primary;
+      padding: calc(#{$spacing-sm} - 2px) calc(#{$spacing-md} - 2px);
+    }
+    
+    // Reduced motion accessibility
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+      
+      &:hover,
+      &:active {
+        transform: none;
+      }
+    }
+  }
+}

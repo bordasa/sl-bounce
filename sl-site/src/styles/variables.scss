@@ -1,0 +1,157 @@
+// SCULPTURELANDIA - Global SCSS Variables
+
+// Brand Colors
+$color-primary: #000000;
+$color-secondary: #ffffff;
+$color-accent: #333333;
+$color-hover: #666666;
+$color-background: #ffffff;
+$color-text: #000000;
+$color-text-light: #666666;
+
+// Typography
+$font-family-primary: 'Arial', 'Helvetica', sans-serif;
+$font-family-heading: 'Arial Black', 'Arial', sans-serif;
+
+// Company header font sizing (responsive)
+$header-font-size-mobile: clamp(1.5rem, 8vw, 3rem);
+$header-font-size-tablet: clamp(2rem, 6vw, 4rem);
+$header-font-size-desktop: clamp(2.5rem, 5vw, 5rem);
+
+// Regular font sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Spacing (using 8px base unit)
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+
+// Responsive breakpoints
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+
+// Z-index layers
+$z-index-base: 1;
+$z-index-drawings: 10;
+$z-index-header: 50;
+$z-index-menu: 100;
+$z-index-modal: 1000;
+
+// Animation durations
+$duration-fast: 0.15s;
+$duration-normal: 0.3s;
+$duration-slow: 0.5s;
+$duration-extra-slow: 1s;
+
+// Animation easings
+$ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-out: cubic-bezier(0, 0, 0.2, 1);
+$ease-in: cubic-bezier(0.4, 0, 1, 1);
+$ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Border radius
+$border-radius-sm: 0.25rem;  // 4px
+$border-radius-md: 0.5rem;   // 8px
+$border-radius-lg: 1rem;     // 16px
+$border-radius-full: 9999px; // Full circle
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+// Drawing animation settings
+$drawing-min-size-mobile: 60px;
+$drawing-max-size-mobile: 100px;
+$drawing-min-size-tablet: 80px;
+$drawing-max-size-tablet: 120px;
+$drawing-min-size-desktop: 100px;
+$drawing-max-size-desktop: 150px;
+
+// Physics constants
+$physics-max-velocity: 2;
+$physics-bounce-damping: 0.8;
+$physics-collision-damping: 0.9;
+
+// Header dimensions
+$header-height-mobile: 60px;
+$header-height-tablet: 80px;
+$header-height-desktop: 100px;
+
+// Menu dimensions
+$menu-width: 250px;
+$hamburger-size: 30px;
+
+// Mixins for responsive design
+@mixin mobile-only {
+  @media (max-width: #{$breakpoint-mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile-and-up {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-up {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+// Utility mixins
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin full-size {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@mixin smooth-animation {
+  transition: all $duration-normal $ease-in-out;
+  @include gpu-accelerated;
+}

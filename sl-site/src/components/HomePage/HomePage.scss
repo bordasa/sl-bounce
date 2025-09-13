@@ -1,0 +1,205 @@
+// HomePage Component Styles
+@import '../../styles/variables.scss';
+
+.homepage {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  // Account for fixed header
+  padding-top: $header-height-mobile;
+  
+  @include tablet-only {
+    padding-top: $header-height-tablet;
+  }
+  
+  @include desktop-only {
+    padding-top: $header-height-desktop;
+  }
+
+  .homepage-content {
+    @include full-size;
+    position: relative;
+    
+    .gallery-container {
+      @include full-size;
+      position: relative;
+      overflow: hidden; // Contain future floating animations
+      
+      // Future: This will contain the FloatingGallery component
+      // The gallery will use absolute positioning to fill this container
+      
+      .gallery-placeholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - #{$header-height-mobile});
+        padding: $spacing-xl;
+        text-align: center;
+        
+        @include tablet-only {
+          min-height: calc(100vh - #{$header-height-tablet});
+        }
+        
+        @include desktop-only {
+          min-height: calc(100vh - #{$header-height-desktop});
+        }
+        
+        .gallery-title {
+          font-size: $font-size-3xl;
+          font-weight: $font-weight-bold;
+          color: $color-primary;
+          margin-bottom: $spacing-lg;
+          
+          @include tablet-and-up {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+          }
+        }
+        
+        .gallery-description {
+          font-size: $font-size-lg;
+          color: $color-text-light;
+          max-width: 600px;
+          line-height: 1.6;
+          margin-bottom: $spacing-2xl;
+        }
+        
+        .coming-soon {
+          display: flex;
+          gap: $spacing-lg;
+          margin-bottom: $spacing-2xl;
+          flex-wrap: wrap;
+          justify-content: center;
+          
+          .placeholder-drawing {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed $color-accent;
+            border-radius: $border-radius-lg;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background: rgba($color-primary, 0.02);
+            transition: all $duration-normal $ease-in-out;
+            
+            span {
+              font-size: $font-size-sm;
+              color: $color-text-light;
+              text-align: center;
+              font-weight: $font-weight-medium;
+            }
+            
+            &:hover {
+              border-color: $color-primary;
+              background: rgba($color-primary, 0.05);
+              transform: translateY(-2px);
+              box-shadow: $shadow-md;
+              
+              span {
+                color: $color-primary;
+              }
+            }
+            
+            // Simulate future animation with subtle pulse
+            animation: gentle-pulse 3s ease-in-out infinite;
+            
+            &:nth-child(2) {
+              animation-delay: 1s;
+            }
+            
+            &:nth-child(3) {
+              animation-delay: 2s;
+            }
+          }
+        }
+        
+        .phase-info {
+          font-size: $font-size-base;
+          color: $color-text-light;
+          font-style: italic;
+          
+          strong {
+            color: $color-primary;
+            font-weight: $font-weight-bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Subtle animation preview
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+// Responsive adjustments
+@include mobile-only {
+  .homepage {
+    .homepage-content {
+      .gallery-container {
+        .gallery-placeholder {
+          padding: $spacing-lg $spacing-md;
+          
+          .gallery-title {
+            font-size: $font-size-2xl;
+          }
+          
+          .gallery-description {
+            font-size: $font-size-base;
+          }
+          
+          .coming-soon {
+            gap: $spacing-md;
+            
+            .placeholder-drawing {
+              width: 100px;
+              height: 100px;
+              
+              span {
+                font-size: $font-size-xs;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  .homepage {
+    .coming-soon .placeholder-drawing {
+      animation: none;
+      
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+  .homepage {
+    .coming-soon .placeholder-drawing {
+      border-color: $color-primary;
+      background: transparent;
+      
+      &:hover {
+        background: rgba($color-primary, 0.1);
+        border-width: 3px;
+      }
+    }
+  }
+}

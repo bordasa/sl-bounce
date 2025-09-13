@@ -1,0 +1,281 @@
+// SCULPTURELANDIA - Global Styles
+@import './variables.scss';
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // Base font size for rem calculations
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-background;
+  overflow-x: hidden; // Prevent horizontal scroll from animations
+  
+  // Ensure full viewport height
+  min-height: 100vh;
+  
+  // Optimize for animations
+  @include gpu-accelerated;
+  
+  // Prevent text selection during animations
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+// Root container
+#root {
+  @include full-size;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; // Contain floating drawings
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: $font-size-3xl;
+  
+  @include mobile-and-up {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+p {
+  margin-bottom: $spacing-md;
+  line-height: 1.7;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+  transition: color $duration-fast $ease-out;
+  
+  &:hover {
+    color: $color-hover;
+  }
+  
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+}
+
+// Button base styles
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: all $duration-fast $ease-out;
+  
+  &:focus {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+// Image optimization
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Main app layout
+.app {
+  @include full-size;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// Header styles (company button)
+.company-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: $header-height-mobile;
+  background-color: transparent;
+  pointer-events: none; // Allow clicks through to drawings below
+  
+  @include tablet-only {
+    height: $header-height-tablet;
+  }
+  
+  @include desktop-only {
+    height: $header-height-desktop;
+  }
+  
+  .company-button {
+    font-family: $font-family-heading;
+    font-weight: $font-weight-black;
+    font-size: $header-font-size-mobile;
+    color: $color-primary;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    pointer-events: auto; // Re-enable clicks on the button itself
+    padding: $spacing-sm $spacing-md;
+    transition: transform $duration-fast $ease-out;
+    
+    @include tablet-only {
+      font-size: $header-font-size-tablet;
+    }
+    
+    @include desktop-only {
+      font-size: $header-font-size-desktop;
+    }
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+// Main content area (below header)
+.main-content {
+  flex: 1;
+  position: relative;
+  
+  // Account for fixed header
+  padding-top: $header-height-mobile;
+  
+  @include tablet-only {
+    padding-top: $header-height-tablet;
+  }
+  
+  @include desktop-only {
+    padding-top: $header-height-desktop;
+  }
+}
+
+// Hamburger menu positioning
+.hamburger-menu {
+  position: fixed;
+  top: $spacing-md;
+  left: $spacing-md;
+  z-index: $z-index-menu;
+  
+  @include tablet-and-up {
+    top: $spacing-lg;
+    left: $spacing-lg;
+  }
+}
+
+// Animation performance optimizations
+.floating-drawing {
+  // GPU acceleration for smooth animations
+  @include gpu-accelerated;
+  will-change: transform;
+  
+  // Prevent subpixel rendering issues
+  transform-style: preserve-3d;
+}
+
+// Loading states
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid $color-text-light;
+    border-top: 3px solid $color-primary;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Error states
+.error {
+  text-align: center;
+  padding: $spacing-xl;
+  color: $color-text-light;
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  // Still allow essential animations but make them faster
+  .floating-drawing {
+    animation-duration: 0.1s !important;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .company-button {
+    border: 2px solid $color-primary;
+  }
+}
+
+// Print styles
+@media print {
+  .hamburger-menu,
+  .floating-drawing {
+    display: none;
+  }
+  
+  .company-header {
+    position: static;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}

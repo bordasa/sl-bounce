@@ -1,0 +1,145 @@
+// AboutPage Component Styles
+@import '../../styles/variables.scss';
+
+.about-page {
+  min-height: 100vh;
+  padding-top: $header-height-mobile;
+  
+  @include tablet-only {
+    padding-top: $header-height-tablet;
+  }
+  
+  @include desktop-only {
+    padding-top: $header-height-desktop;
+  }
+
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: $spacing-xl $spacing-lg;
+    
+    @include mobile-only {
+      padding: $spacing-lg $spacing-md;
+    }
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    
+    h1 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: $spacing-md;
+      
+      @include mobile-only {
+        font-size: $font-size-2xl;
+      }
+    }
+    
+    .subtitle {
+      font-size: $font-size-xl;
+      color: $color-text-light;
+      font-style: italic;
+    }
+  }
+
+  .about-section {
+    margin-bottom: $spacing-3xl;
+    
+    h2 {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: $spacing-lg;
+      border-bottom: 2px solid rgba($color-primary, 0.1);
+      padding-bottom: $spacing-sm;
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      line-height: 1.7;
+      color: $color-text;
+      margin-bottom: $spacing-lg;
+      
+      em {
+        color: $color-text-light;
+        font-style: italic;
+      }
+    }
+    
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: $spacing-xl;
+      margin-top: $spacing-xl;
+      
+      .approach-item {
+        text-align: center;
+        padding: $spacing-xl $spacing-lg;
+        background: rgba($color-primary, 0.02);
+        border-radius: $border-radius-lg;
+        border: 1px solid rgba($color-primary, 0.1);
+        
+        h3 {
+          font-size: $font-size-xl;
+          font-weight: $font-weight-bold;
+          color: $color-primary;
+          margin-bottom: $spacing-md;
+        }
+        
+        p {
+          font-size: $font-size-base;
+          line-height: 1.6;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .page-navigation {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-lg;
+    flex-wrap: wrap;
+    margin-top: $spacing-3xl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid rgba($color-primary, 0.1);
+    
+    .nav-button {
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      color: $color-background;
+      background-color: $color-primary;
+      border: none;
+      border-radius: $border-radius-md;
+      cursor: pointer;
+      
+      transition: all $duration-fast $ease-out;
+      
+      &:hover {
+        background-color: $color-hover;
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+      }
+      
+      &:focus {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+      
+      &.secondary {
+        background-color: transparent;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        
+        &:hover {
+          background-color: $color-primary;
+          color: $color-background;
+        }
+      }
+    }
+  }
+}
