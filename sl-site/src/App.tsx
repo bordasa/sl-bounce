@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useParams } from 'react-router-dom';
 
 console.log('App.tsx loading...');
 
@@ -216,6 +216,7 @@ const sculptures = [
 // Physics system for bouncing sculptures
 const HomePage: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
   
   // Physics state for each sculpture
   const [entities, setEntities] = React.useState(() => 
@@ -223,8 +224,8 @@ const HomePage: React.FC = () => {
       id: sculpture.id,
       x: 200 + (index * 250), // Starting positions spread out
       y: 200 + (index * 50),
-      vx: (Math.random() - 0.5) * 3, // Random initial velocity
-      vy: (Math.random() - 0.5) * 3,
+      vx: (Math.random() - 0.5) * 4, // Slightly higher velocity for better collisions
+      vy: (Math.random() - 0.5) * 4,
       width: 150,
       height: 150,
       isHovered: false,
@@ -237,46 +238,63 @@ const HomePage: React.FC = () => {
     const dx = (entity1.x + entity1.width/2) - (entity2.x + entity2.width/2);
     const dy = (entity1.y + entity1.height/2) - (entity2.y + entity2.height/2);
     const distance = Math.sqrt(dx * dx + dy * dy);
-    const minDistance = (entity1.width + entity2.width) / 4; // Collision radius
+    const minDistance = (entity1.width + entity2.width) / 3; // Larger collision radius for better detection
     
     return distance < minDistance;
   };
 
-  // Handle collision response
+  // Handle collision response - simplified and more reliable
   const handleCollision = (entity1: any, entity2: any) => {
-    const dx = (entity1.x + entity1.width/2) - (entity2.x + entity2.width/2);
-    const dy = (entity1.y + entity1.height/2) - (entity2.y + entity2.height/2);
+    // Get center positions
+    const x1 = entity1.x + entity1.width/2;
+    const y1 = entity1.y + entity1.height/2;
+    const x2 = entity2.x + entity2.width/2;
+    const y2 = entity2.y + entity2.height/2;
+    
+    // Calculate collision angle
+    const dx = x2 - x1;
+    const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
     
-    if (distance === 0) return { entity1, entity2 }; // Avoid division by zero
+    if (distance === 0) {
+      // If objects are exactly on top of each other, separate them randomly
+      const angle = Math.random() * Math.PI * 2;
+      return {
+        entity1: {
+          ...entity1,
+          vx: Math.cos(angle) * 2,
+          vy: Math.sin(angle) * 2
+        },
+        entity2: {
+          ...entity2,
+          vx: -Math.cos(angle) * 2,
+          vy: -Math.sin(angle) * 2
+        }
+      };
+    }
     
-    // Normalize collision vector
+    // Normalize collision direction
     const nx = dx / distance;
     const ny = dy / distance;
     
-    // Relative velocity
-    const dvx = entity1.vx - entity2.vx;
-    const dvy = entity1.vy - entity2.vy;
+    // Simple elastic collision - swap velocity components along collision normal
+    const speed1 = Math.sqrt(entity1.vx * entity1.vx + entity1.vy * entity1.vy);
+    const speed2 = Math.sqrt(entity2.vx * entity2.vx + entity2.vy * entity2.vy);
+    const avgSpeed = (speed1 + speed2) / 2;
     
-    // Relative velocity in collision normal direction
-    const dvn = dvx * nx + dvy * ny;
-    
-    // Don't resolve if velocities are separating
-    if (dvn > 0) return { entity1, entity2 };
-    
-    // Collision impulse
-    const impulse = 2 * dvn / 2; // Assuming equal mass
+    // Apply new velocities based on collision normal
+    const bounceStrength = Math.max(2, avgSpeed * 0.8);
     
     return {
       entity1: {
         ...entity1,
-        vx: entity1.vx - impulse * nx,
-        vy: entity1.vy - impulse * ny
+        vx: -nx * bounceStrength,
+        vy: -ny * bounceStrength
       },
       entity2: {
         ...entity2,
-        vx: entity2.vx + impulse * nx,
-        vy: entity2.vy + impulse * ny
+        vx: nx * bounceStrength,
+        vy: ny * bounceStrength
       }
     };
   };
@@ -381,6 +399,11 @@ const HomePage: React.FC = () => {
     );
   };
 
+  // Handle sculpture click
+  const handleSculptureClick = (id: string) => {
+    navigate(`/sculpture/${id}`);
+  };
+
   return (
     <main 
       ref={containerRef}
@@ -408,6 +431,7 @@ const HomePage: React.FC = () => {
           }}
           onMouseEnter={() => handleMouseEnter(entity.id)}
           onMouseLeave={() => handleMouseLeave(entity.id)}
+          onClick={() => handleSculptureClick(entity.id)}
         >
           <img
             src={entity.src}
@@ -418,8 +442,9 @@ const HomePage: React.FC = () => {
               objectFit: 'contain',
               userSelect: 'none',
               filter: entity.isHovered 
-                ? 'drop-shadow(0 8px 16px rgba(0,0,0,0.2))' 
-                : 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))'
+                ? 'drop-shadow(0 8px 16px rgba(0,0,0,0.2)) brightness(1.1)' 
+                : 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))',
+              transition: 'filter 0.2s ease'
             }}
             onError={(e) => {
               const img = e.currentTarget;
@@ -436,6 +461,230 @@ const HomePage: React.FC = () => {
   );
 };
 
+// Individual Sculpture Page Component
+const SculpturePage: React.FC = () => {
+  const navigate = useNavigate();
+  const { id: sculptureId } = useParams<{ id: string }>();
+  
+  // Find the sculpture data
+  const sculpture = sculptures.find(s => s.id === sculptureId);
+  
+  if (!sculpture) {
+    return (
+      <main style={{
+        minHeight: '100vh',
+        paddingTop: '100px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        padding: '100px 20px'
+      }}>
+        <div>
+          <h2 style={{ fontSize: '2rem', color: '#000', marginBottom: '16px' }}>
+            Sculpture Not Found
+          </h2>
+          <p style={{ color: '#666', marginBottom: '32px' }}>
+            The requested sculpture could not be found.
+          </p>
+          <button
+            onClick={() => navigate('/')}
+            style={{
+              padding: '12px 24px',
+              fontSize: '16px',
+              backgroundColor: '#000',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer'
+            }}
+          >
+            Back to Gallery
+          </button>
+        </div>
+      </main>
+    );
+  }
+  
+  return (
+    <main style={{
+      minHeight: '100vh',
+      paddingTop: '100px',
+      padding: '100px 40px 40px',
+      maxWidth: '1200px',
+      margin: '0 auto'
+    }}>
+      {/* Back Button */}
+      <button
+        onClick={() => navigate('/')}
+        style={{
+          marginBottom: '32px',
+          padding: '8px 16px',
+          fontSize: '14px',
+          backgroundColor: 'transparent',
+          color: '#666',
+          border: '1px solid #ddd',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          transition: 'all 0.2s ease'
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.backgroundColor = '#f5f5f5';
+          e.currentTarget.style.color = '#000';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.backgroundColor = 'transparent';
+          e.currentTarget.style.color = '#666';
+        }}
+      >
+        ← Back to Gallery
+      </button>
+
+      {/* Hero Section */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '60px',
+        marginBottom: '60px',
+        alignItems: 'center'
+      }}>
+        {/* 2D Drawing */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <img
+            src={sculpture.src}
+            alt={sculpture.alt}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '400px',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
+              borderRadius: '12px'
+            }}
+          />
+        </div>
+
+        {/* Title and Description */}
+        <div>
+          <h1 style={{
+            fontSize: '3rem',
+            fontWeight: 'bold',
+            color: '#000',
+            marginBottom: '24px',
+            lineHeight: '1.2'
+          }}>
+            {sculpture.fallback}
+          </h1>
+          
+          <p style={{
+            fontSize: '1.25rem',
+            lineHeight: '1.6',
+            color: '#666',
+            marginBottom: '32px'
+          }}>
+            This is the detailed description area where you can add compelling information about this sculpture. 
+            You can describe the inspiration, materials, artistic process, and meaning behind the work.
+          </p>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '24px'
+          }}>
+            <div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                Artist
+              </h3>
+              <p style={{ color: '#666' }}>SCULPTURELANDIA Artist</p>
+            </div>
+            
+            <div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                Year
+              </h3>
+              <p style={{ color: '#666' }}>2024</p>
+            </div>
+            
+            <div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                Materials
+              </h3>
+              <p style={{ color: '#666' }}>Mixed Media</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Photo Gallery Section */}
+      <section style={{ marginBottom: '60px' }}>
+        <h2 style={{
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          color: '#000',
+          marginBottom: '32px',
+          textAlign: 'center'
+        }}>
+          Sculpture Photography
+        </h2>
+        
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '24px'
+        }}>
+          {/* Photo placeholders - you can replace these with actual photos */}
+          {[1, 2, 3].map(num => (
+            <div
+              key={num}
+              style={{
+                aspectRatio: '4/3',
+                backgroundColor: '#f5f5f5',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                border: '2px dashed #ddd',
+                color: '#999',
+                fontSize: '1rem'
+              }}
+            >
+              Photo {num} Placeholder
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Navigation */}
+      <div style={{
+        textAlign: 'center',
+        borderTop: '1px solid #eee',
+        paddingTop: '32px'
+      }}>
+        <button
+          onClick={() => navigate('/')}
+          style={{
+            padding: '16px 32px',
+            fontSize: '16px',
+            backgroundColor: '#000',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            transition: 'background-color 0.2s ease'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#333'}
+          onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#000'}
+        >
+          Back to Interactive Gallery
+        </button>
+      </div>
+    </main>
+  );
+};
+
 function App() {
   console.log('App component rendering...');
   
@@ -446,6 +695,7 @@ function App() {
         <HamburgerMenu />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/sculpture/:id" element={<SculpturePage />} />
         </Routes>
       </div>
     </Router>
