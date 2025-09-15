@@ -1,0 +1,139 @@
+{
+  "sculptures": {
+    "ballchair": {
+      "id": "ballchair",
+      "title": "Ball Chair",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2023",
+      "materials": "Powder-coated steel frame, premium upholstery foam, hand-selected fabric",
+      "dimensions": "32\" × 28\" × 35\" (81cm × 71cm × 89cm)",
+      "weight": "45 lbs (20.4 kg)",
+      "price": "$2,400",
+      "availability": "Available",
+      "edition": "Limited edition of 25",
+      "description": "The Ball Chair represents a bold exploration of geometric comfort and spatial intimacy. This iconic piece challenges conventional seating design by creating a cocoon-like environment that offers both privacy and openness. The spherical form, inspired by mid-century modern principles, transforms the act of sitting into an immersive experience.",
+      "artistStatement": "In creating the Ball Chair, we sought to redefine personal space within public environments. The curved interior creates an acoustic sanctuary, while the bold exterior form makes a powerful sculptural statement. Each piece is individually crafted with attention to both aesthetic impact and ergonomic comfort.",
+      "technicalNotes": "Hand-welded steel frame with precision powder coating. Interior features multi-density foam layers for optimal comfort. Swivel base allows 360-degree rotation. Upholstery available in curated selection of premium fabrics.",
+      "inspiration": "Born from observing soap bubbles and their perfect geometric forms, the Ball Chair embodies the tension between containment and freedom. The piece invites contemplation while serving as functional art.",
+      "process": "Each chair begins with hand-formed steel tubing, welded and finished in our workshop. The upholstery process involves traditional techniques combined with modern materials to ensure longevity and comfort.",
+      "drawingPath": "/assets/drawings/Ballchair.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/ballchair-hero.jpg",
+          "alt": "Ball Chair in minimalist gallery setting",
+          "caption": "Studio photography showcasing the iconic silhouette"
+        },
+        {
+          "src": "/assets/photos/ballchair-detail.jpg",
+          "alt": "Close-up detail of Ball Chair upholstery and steel frame",
+          "caption": "Hand-stitched upholstery detail and powder-coated frame"
+        },
+        {
+          "src": "/assets/photos/ballchair-in-use.jpg",
+          "alt": "Ball Chair being used in modern living space",
+          "caption": "The Ball Chair in its natural environment"
+        }
+      ],
+      "tags": ["seating", "modern", "steel", "comfort", "iconic", "mid-century"],
+      "featured": true,
+      "dateCreated": "2023-08-15",
+      "exhibitions": [
+        "Modern Forms Gallery, New York (2023)",
+        "Design Week Milano (2024)"
+      ],
+      "awards": ["Best Furniture Design - Contemporary Art Awards 2023"]
+    },
+    "doublenauty": {
+      "id": "doublenauty",
+      "title": "Double Nauty",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024", 
+      "materials": "Marine-grade aluminum, weathered steel, tension cables",
+      "dimensions": "48\" × 24\" × 36\" (122cm × 61cm × 91cm)",
+      "weight": "85 lbs (38.6 kg)",
+      "price": "$3,200",
+      "availability": "Available",
+      "edition": "Unique piece",
+      "description": "Double Nauty explores the intersection of nautical engineering and sculptural form. This piece captures the essence of maritime tension and balance, with two interlocking forms that appear to float in perpetual motion. The sculpture embodies both stability and dynamism, reflecting our complex relationship with the sea.",
+      "artistStatement": "This work emerged from countless hours studying ship rigging and the beautiful tension systems that allow massive vessels to harness wind power. Double Nauty translates that engineering poetry into sculptural language, creating a meditation on balance and interdependence.",
+      "technicalNotes": "Constructed from marine-grade aluminum with weathered steel accents. Tension cable system creates structural integrity while maintaining visual lightness. All materials selected for both indoor and outdoor display capability.",
+      "inspiration": "The piece draws inspiration from traditional ship rigging, specifically the relationship between opposing forces that create stability. The 'nauty' - a play on 'nautical' and 'knotty' - represents the complex problem-solving inherent in maritime design.",
+      "process": "Each component is precisely machined and hand-finished. The weathering process is controlled to achieve the desired patina while maintaining structural integrity. Assembly requires careful calibration of tension systems.",
+      "drawingPath": "/assets/drawings/Doublenauty.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/doublenauty-hero.jpg",
+          "alt": "Double Nauty sculpture in outdoor setting",
+          "caption": "Outdoor installation showcasing weather-resistant materials"
+        },
+        {
+          "src": "/assets/photos/doublenauty-detail.jpg",
+          "alt": "Close-up of Double Nauty tension cable system",
+          "caption": "Precision-engineered tension cable detail"
+        },
+        {
+          "src": "/assets/photos/doublenauty-studio.jpg",
+          "alt": "Double Nauty in artist's studio during creation",
+          "caption": "Work in progress in the SCULPTURELANDIA studio"
+        }
+      ],
+      "tags": ["nautical", "aluminum", "tension", "engineering", "outdoor", "kinetic"],
+      "featured": true,
+      "dateCreated": "2024-03-22",
+      "exhibitions": [
+        "Coastal Arts Festival, Monterey (2024)",
+        "Sculpture by the Sea, Sydney (2024)"
+      ],
+      "awards": ["People's Choice - Coastal Arts Festival 2024"]
+    },
+    "lemonchair": {
+      "id": "lemonchair",
+      "title": "Lemon Chair 2",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "Lemon Chair 2 represents the evolution of our exploration into organic forms and natural materials. This piece combines traditional woodworking techniques with contemporary design sensibilities, creating furniture that feels both timeless and thoroughly modern. The warm lemon oil finish enhances the natural grain while providing a subtle citrus aroma.",
+      "artistStatement": "The second iteration of our Lemon Chair series pushes further into the realm of sensory design. We believe furniture should engage multiple senses - the visual beauty of wood grain, the tactile pleasure of smooth curves, and yes, even a subtle olfactory experience that connects us to nature.",
+      "technicalNotes": "Constructed using steam-bent plywood techniques pioneered in Scandinavian furniture design. Multiple layers are laminated and formed over custom molds. The lemon oil finish is applied in seven thin coats, each hand-rubbed to achieve optimal depth and protection.",
+      "inspiration": "This piece grows from our fascination with citrus forms - the way a lemon's curves are both mathematically precise and organically imperfect. The chair's flowing lines echo these natural geometries while providing exceptional ergonomic support.",
+      "process": "The creation process begins with selecting premium plywood sheets. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, sanded through multiple grits, and finished by hand with our signature lemon oil blend.",
+      "drawingPath": "/assets/drawings/Lemonchair2.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2024-09-14",
+    "version": "1.0.0",
+    "totalSculptures": 3,
+    "curator": "SCULPTURELANDIA Content Team"
+  }
+}

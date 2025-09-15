@@ -1,7 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useParams } from 'react-router-dom';
+import sculptureData from './data/sculptures.json';
 
 console.log('App.tsx loading...');
+
+// Note: All TypeScript interfaces are inferred from sculptures.json structure
+// This includes Photo interface for photo arrays and Sculpture interface for sculpture data
 
 // Header Component - SCULPTURELANDIA at top center
 const Header: React.FC = () => {
@@ -192,26 +196,13 @@ const HamburgerMenu: React.FC = () => {
 };
 
 // Sculpture data for physics system
-const sculptures = [
-  {
-    id: 'ballchair',
-    src: '/assets/drawings/Ballchair.PNG',
-    alt: 'Ball Chair sculpture drawing',
-    fallback: 'Ball Chair'
-  },
-  {
-    id: 'doublenauty', 
-    src: '/assets/drawings/Doublenauty.PNG',
-    alt: 'Double Nauty sculpture drawing',
-    fallback: 'Double Nauty'
-  },
-  {
-    id: 'lemonchair',
-    src: '/assets/drawings/Lemonchair2.PNG', 
-    alt: 'Lemon Chair 2 sculpture drawing',
-    fallback: 'Lemon Chair 2'
-  }
-];
+// Load sculpture data from JSON file
+const sculptures = Object.values(sculptureData.sculptures).map(sculpture => ({
+  id: sculpture.id,
+  src: sculpture.drawingPath,
+  alt: `${sculpture.title} sculpture drawing`,
+  fallback: sculpture.title
+}));
 
 // Physics system for bouncing sculptures
 const HomePage: React.FC = () => {
@@ -221,15 +212,14 @@ const HomePage: React.FC = () => {
   // Physics state for each sculpture
   const [entities, setEntities] = React.useState(() => 
     sculptures.map((sculpture, index) => ({
-      id: sculpture.id,
+      ...sculpture,
       x: 200 + (index * 250), // Starting positions spread out
       y: 200 + (index * 50),
       vx: (Math.random() - 0.5) * 4, // Slightly higher velocity for better collisions
       vy: (Math.random() - 0.5) * 4,
       width: 150,
       height: 150,
-      isHovered: false,
-      ...sculpture
+      isHovered: false
     }))
   );
 
@@ -461,13 +451,20 @@ const HomePage: React.FC = () => {
   );
 };
 
+// Helper function to check if content exists and is not empty
+const hasContent = (value: any): boolean => {
+  if (Array.isArray(value)) return value.length > 0;
+  if (typeof value === 'string') return value.trim().length > 0;
+  return value != null && value !== '';
+};
+
 // Individual Sculpture Page Component
 const SculpturePage: React.FC = () => {
   const navigate = useNavigate();
   const { id: sculptureId } = useParams<{ id: string }>();
   
-  // Find the sculpture data
-  const sculpture = sculptures.find(s => s.id === sculptureId);
+  // Find the sculpture data from JSON
+  const sculpture = sculptureData.sculptures[sculptureId as keyof typeof sculptureData.sculptures];
   
   if (!sculpture) {
     return (
@@ -505,7 +502,7 @@ const SculpturePage: React.FC = () => {
       </main>
     );
   }
-  
+
   return (
     <main style={{
       minHeight: '100vh',
@@ -555,8 +552,8 @@ const SculpturePage: React.FC = () => {
           alignItems: 'center'
         }}>
           <img
-            src={sculpture.src}
-            alt={sculpture.alt}
+            src={sculpture.drawingPath}
+            alt={`${sculpture.title} sculpture drawing`}
             style={{
               maxWidth: '100%',
               maxHeight: '400px',
@@ -576,7 +573,7 @@ const SculpturePage: React.FC = () => {
             marginBottom: '24px',
             lineHeight: '1.2'
           }}>
-            {sculpture.fallback}
+            {sculpture.title}
           </h1>
           
           <p style={{
@@ -585,8 +582,7 @@ const SculpturePage: React.FC = () => {
             color: '#666',
             marginBottom: '32px'
           }}>
-            This is the detailed description area where you can add compelling information about this sculpture. 
-            You can describe the inspiration, materials, artistic process, and meaning behind the work.
+            {sculpture.description}
           </p>
           
           <div style={{
@@ -594,68 +590,278 @@ const SculpturePage: React.FC = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '24px'
           }}>
-            <div>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                Artist
-              </h3>
-              <p style={{ color: '#666' }}>SCULPTURELANDIA Artist</p>
-            </div>
+            {hasContent(sculpture.artist) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Artist
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.artist}</p>
+              </div>
+            )}
             
-            <div>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                Year
-              </h3>
-              <p style={{ color: '#666' }}>2024</p>
-            </div>
+            {hasContent(sculpture.year) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Year
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.year}</p>
+              </div>
+            )}
             
-            <div>
-              <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                Materials
-              </h3>
-              <p style={{ color: '#666' }}>Mixed Media</p>
-            </div>
+            {hasContent(sculpture.materials) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Materials
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.materials}</p>
+              </div>
+            )}
+            
+            {hasContent(sculpture.dimensions) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Dimensions
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.dimensions}</p>
+              </div>
+            )}
+            
+            {hasContent(sculpture.price) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Price
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.price}</p>
+              </div>
+            )}
+            
+            {hasContent(sculpture.availability) && (
+              <div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
+                  Availability
+                </h3>
+                <p style={{ color: '#666' }}>{sculpture.availability}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Photo Gallery Section */}
-      <section style={{ marginBottom: '60px' }}>
-        <h2 style={{
-          fontSize: '2rem',
-          fontWeight: 'bold',
-          color: '#000',
-          marginBottom: '32px',
-          textAlign: 'center'
-        }}>
-          Sculpture Photography
-        </h2>
-        
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '24px'
-        }}>
-          {/* Photo placeholders - you can replace these with actual photos */}
-          {[1, 2, 3].map(num => (
-            <div
-              key={num}
-              style={{
-                aspectRatio: '4/3',
-                backgroundColor: '#f5f5f5',
-                borderRadius: '12px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '2px dashed #ddd',
-                color: '#999',
-                fontSize: '1rem'
-              }}
-            >
-              Photo {num} Placeholder
+      {/* Artist Statement and Details - only show if any content exists */}
+      {(hasContent(sculpture.artistStatement) || hasContent(sculpture.inspiration) || hasContent(sculpture.process) || hasContent(sculpture.technicalNotes)) && (
+        <section style={{ marginBottom: '60px' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '60px',
+            marginBottom: '40px'
+          }}>
+            <div>
+              {/* Artist Statement - only show if content exists */}
+              {hasContent(sculpture.artistStatement) && (
+                <>
+                  <h2 style={{
+                    fontSize: '1.5rem',
+                    fontWeight: 'bold',
+                    color: '#000',
+                    marginBottom: '16px'
+                  }}>
+                    Artist Statement
+                  </h2>
+                  <p style={{
+                    fontSize: '1rem',
+                    lineHeight: '1.6',
+                    color: '#666',
+                    marginBottom: '24px'
+                  }}>
+                    {sculpture.artistStatement}
+                  </p>
+                </>
+              )}
+              
+              {/* Inspiration - only show if content exists */}
+              {hasContent(sculpture.inspiration) && (
+                <>
+                  <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 'bold',
+                    color: '#000',
+                    marginBottom: '12px'
+                  }}>
+                    Inspiration
+                  </h3>
+                  <p style={{
+                    fontSize: '1rem',
+                    lineHeight: '1.6',
+                    color: '#666'
+                  }}>
+                    {sculpture.inspiration}
+                  </p>
+                </>
+              )}
             </div>
-          ))}
-        </div>
-      </section>
+            
+            <div>
+              {/* Creative Process - only show if content exists */}
+              {hasContent(sculpture.process) && (
+                <>
+                  <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 'bold',
+                    color: '#000',
+                    marginBottom: '12px'
+                  }}>
+                    Creative Process
+                  </h3>
+                  <p style={{
+                    fontSize: '1rem',
+                    lineHeight: '1.6',
+                    color: '#666',
+                    marginBottom: '24px'
+                  }}>
+                    {sculpture.process}
+                  </p>
+                </>
+              )}
+              
+              {/* Technical Notes - only show if content exists */}
+              {hasContent(sculpture.technicalNotes) && (
+                <>
+                  <h3 style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 'bold',
+                    color: '#000',
+                    marginBottom: '12px'
+                  }}>
+                    Technical Notes
+                  </h3>
+                  <p style={{
+                    fontSize: '1rem',
+                    lineHeight: '1.6',
+                    color: '#666'
+                  }}>
+                    {sculpture.technicalNotes}
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+          
+          {/* Exhibition History */}
+          {hasContent(sculpture.exhibitions) && (
+            <div style={{
+              borderTop: '1px solid #eee',
+              paddingTop: '32px',
+              marginBottom: '32px'
+            }}>
+              <h3 style={{
+                fontSize: '1.25rem',
+                fontWeight: 'bold',
+                color: '#000',
+                marginBottom: '16px'
+              }}>
+                Exhibition History
+              </h3>
+              <ul style={{
+                listStyle: 'disc',
+                paddingLeft: '24px',
+                color: '#666',
+                lineHeight: '1.6'
+              }}>
+                {sculpture.exhibitions.map((exhibition, index) => (
+                  <li key={index} style={{ marginBottom: '8px' }}>
+                    {exhibition}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {/* Awards */}
+          {hasContent(sculpture.awards) && (
+            <div>
+              <h3 style={{
+                fontSize: '1.25rem',
+                fontWeight: 'bold',
+                color: '#000',
+                marginBottom: '16px'
+              }}>
+                Recognition
+              </h3>
+              <ul style={{
+                listStyle: 'disc',
+                paddingLeft: '24px',
+                color: '#666',
+                lineHeight: '1.6'
+              }}>
+                {sculpture.awards.map((award, index) => (
+                  <li key={index} style={{ marginBottom: '8px' }}>
+                    {award}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* Photo Gallery Section - only show if photos exist */}
+      {hasContent(sculpture.photos) && (
+        <section style={{ marginBottom: '60px' }}>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            color: '#000',
+            marginBottom: '32px',
+            textAlign: 'center'
+          }}>
+            Sculpture Photography
+          </h2>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '24px'
+          }}>
+            {sculpture.photos.map((photo, index) => (
+              <div
+                key={index}
+                style={{
+                  aspectRatio: '4/3',
+                  backgroundColor: '#f5f5f5',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                  border: '2px dashed #ddd',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#999',
+                  fontSize: '0.9rem',
+                  textAlign: 'center',
+                  padding: '20px'
+                }}
+              >
+                {/* Photo placeholder with metadata */}
+                <div>
+                  <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
+                    Photo Placeholder
+                  </div>
+                  <div style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
+                    {photo.caption}
+                  </div>
+                  <div style={{ 
+                    fontSize: '0.7rem', 
+                    marginTop: '8px',
+                    color: '#aaa'
+                  }}>
+                    Path: {photo.src}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Navigation */}
       <div style={{
