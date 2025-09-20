@@ -95,11 +95,11 @@ export interface UsePhysicsReturn {
 }
 
 // Responsive breakpoints
-export enum Breakpoint {
-  Mobile = 768,
-  Tablet = 1024,
-  Desktop = 1200
-}
+export const Breakpoint = {
+  Mobile: 768,
+  Tablet: 1024,
+  Desktop: 1200
+} as const;
 
 export interface ResponsiveConfig {
   drawingCount: {

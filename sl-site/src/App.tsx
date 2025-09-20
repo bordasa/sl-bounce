@@ -197,31 +197,37 @@ const HamburgerMenu: React.FC = () => {
 
 // Sculpture data for physics system
 // Load sculpture data from JSON file
-const sculptures = Object.values(sculptureData.sculptures).map(sculpture => ({
-  id: sculpture.id,
-  src: sculpture.drawingPath,
-  alt: `${sculpture.title} sculpture drawing`,
-  fallback: sculpture.title
-}));
+const sculptures = Object.values(sculptureData.sculptures)
+  .filter((item): item is any => 'id' in item && 'drawingPath' in item && 'title' in item) // Filter out metadata and invalid entries
+  .map(sculpture => ({
+    id: sculpture.id,
+    src: sculpture.drawingPath,
+    alt: `${sculpture.title} sculpture drawing`,
+    fallback: sculpture.title
+  }));
 
 // Physics system for bouncing sculptures
 const HomePage: React.FC = () => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   
-  // Physics state for each sculpture
-  const [entities, setEntities] = React.useState(() => 
-    sculptures.map((sculpture, index) => ({
+  // Physics state for each sculpture - initialized with random positions
+  const [entities, setEntities] = React.useState(() => {
+    // Get initial window dimensions (fallback to reasonable defaults)
+    const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
+    const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 800;
+    
+    return sculptures.map((sculpture) => ({
       ...sculpture,
-      x: 200 + (index * 250), // Starting positions spread out
-      y: 200 + (index * 50),
-      vx: (Math.random() - 0.5) * 4, // Slightly higher velocity for better collisions
-      vy: (Math.random() - 0.5) * 4,
+      x: Math.random() * Math.max(0, windowWidth - 150), // Random position across full width
+      y: 80 + Math.random() * Math.max(0, windowHeight - 230), // Random position below header (80px) 
+      vx: (Math.random() - 0.5) * 2, // Reduced speed by 50% (was 4, now 2)
+      vy: (Math.random() - 0.5) * 2, // Reduced speed by 50% (was 4, now 2)
       width: 150,
       height: 150,
       isHovered: false
-    }))
-  );
+    }));
+  });
 
   // Collision detection between two entities
   const checkCollision = (entity1: any, entity2: any) => {
@@ -304,6 +310,18 @@ const HomePage: React.FC = () => {
       setEntities(prevEntities => {
         let updatedEntities = [...prevEntities];
         
+        // Calculate expanded boundaries - 20% larger than window with minimums for mobile
+        const minBoundaryWidth = 600; // Minimum boundary for very small screens
+        const minBoundaryHeight = 400; // Minimum boundary for very small screens
+        const boundaryPadding = 0.1; // 10% expansion beyond window size
+        
+        const boundaryWidth = Math.max(minBoundaryWidth, containerWidth * (1 + boundaryPadding * 2));
+        const boundaryHeight = Math.max(minBoundaryHeight, containerHeight * (1 + boundaryPadding * 2));
+        
+        // Offset boundaries so they're centered on the window
+        const boundaryOffsetX = -(boundaryWidth - containerWidth) / 2;
+        const boundaryOffsetY = -(boundaryHeight - containerHeight) / 2;
+        
         // Update positions and handle boundary collisions
         updatedEntities = updatedEntities.map(entity => {
           // Don't update position if hovered
@@ -316,15 +334,15 @@ const HomePage: React.FC = () => {
           let newVx = entity.vx;
           let newVy = entity.vy;
 
-          // Boundary collision detection
-          if (newX <= 0 || newX >= containerWidth - entity.width) {
+          // Boundary collision detection with expanded boundaries
+          if (newX <= boundaryOffsetX || newX >= boundaryOffsetX + boundaryWidth - entity.width) {
             newVx = -newVx;
-            newX = Math.max(0, Math.min(containerWidth - entity.width, newX));
+            newX = Math.max(boundaryOffsetX, Math.min(boundaryOffsetX + boundaryWidth - entity.width, newX));
           }
           
-          if (newY <= 80 || newY >= containerHeight - entity.height) { // 80px for header
+          if (newY <= 80 + boundaryOffsetY || newY >= boundaryOffsetY + boundaryHeight - entity.height) { // 80px for header
             newVy = -newVy;
-            newY = Math.max(80, Math.min(containerHeight - entity.height, newY));
+            newY = Math.max(80 + boundaryOffsetY, Math.min(boundaryOffsetY + boundaryHeight - entity.height, newY));
           }
 
           return {
@@ -466,7 +484,8 @@ const SculpturePage: React.FC = () => {
   // Find the sculpture data from JSON
   const sculpture = sculptureData.sculptures[sculptureId as keyof typeof sculptureData.sculptures];
   
-  if (!sculpture) {
+  // Type guard to ensure we have a valid sculpture (not metadata)
+  if (!sculpture || !('id' in sculpture) || !('drawingPath' in sculpture) || !('title' in sculpture)) {
     return (
       <main style={{
         minHeight: '100vh',
@@ -768,7 +787,7 @@ const SculpturePage: React.FC = () => {
                 color: '#666',
                 lineHeight: '1.6'
               }}>
-                {sculpture.exhibitions.map((exhibition, index) => (
+                  {sculpture.exhibitions.map((exhibition: string, index: number) => (
                   <li key={index} style={{ marginBottom: '8px' }}>
                     {exhibition}
                   </li>
@@ -794,7 +813,7 @@ const SculpturePage: React.FC = () => {
                 color: '#666',
                 lineHeight: '1.6'
               }}>
-                {sculpture.awards.map((award, index) => (
+                  {sculpture.awards.map((award: string, index: number) => (
                   <li key={index} style={{ marginBottom: '8px' }}>
                     {award}
                   </li>
@@ -823,7 +842,7 @@ const SculpturePage: React.FC = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '24px'
           }}>
-            {sculpture.photos.map((photo, index) => (
+                {sculpture.photos.map((photo: any, index: number) => (
               <div
                 key={index}
                 style={{

@@ -180,3 +180,4 @@ src/
 
 ## Development Phases (See development-plan.md)
 The recommended approach balances modern web development practices with the specific needs of an interactive art gallery, providing smooth animations while maintaining excellent performance across all devices.
+

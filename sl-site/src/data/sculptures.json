@@ -1,8 +1,8 @@
 {
   "sculptures": {
-    "ballchair": {
-      "id": "ballchair",
-      "title": "Ball Chair",
+    "atom-chair": {
+      "id": "atom-chair",
+      "title": "Atom Chair",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2023",
       "materials": "Powder-coated steel frame, premium upholstery foam, hand-selected fabric",
@@ -16,7 +16,7 @@
       "technicalNotes": "Hand-welded steel frame with precision powder coating. Interior features multi-density foam layers for optimal comfort. Swivel base allows 360-degree rotation. Upholstery available in curated selection of premium fabrics.",
       "inspiration": "Born from observing soap bubbles and their perfect geometric forms, the Ball Chair embodies the tension between containment and freedom. The piece invites contemplation while serving as functional art.",
       "process": "Each chair begins with hand-formed steel tubing, welded and finished in our workshop. The upholstery process involves traditional techniques combined with modern materials to ensure longevity and comfort.",
-      "drawingPath": "/assets/drawings/Ballchair.PNG",
+      "drawingPath": "/assets/drawings/atom-chair.PNG",
       "photos": [
         {
           "src": "/assets/photos/ballchair-hero.jpg",
@@ -43,8 +43,8 @@
       ],
       "awards": ["Best Furniture Design - Contemporary Art Awards 2023"]
     },
-    "doublenauty": {
-      "id": "doublenauty",
+    "double-nauty": {
+      "id": "double-nauty",
       "title": "Double Nauty",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024", 
@@ -59,7 +59,7 @@
       "technicalNotes": "Constructed from marine-grade aluminum with weathered steel accents. Tension cable system creates structural integrity while maintaining visual lightness. All materials selected for both indoor and outdoor display capability.",
       "inspiration": "The piece draws inspiration from traditional ship rigging, specifically the relationship between opposing forces that create stability. The 'nauty' - a play on 'nautical' and 'knotty' - represents the complex problem-solving inherent in maritime design.",
       "process": "Each component is precisely machined and hand-finished. The weathering process is controlled to achieve the desired patina while maintaining structural integrity. Assembly requires careful calibration of tension systems.",
-      "drawingPath": "/assets/drawings/Doublenauty.PNG",
+      "drawingPath": "/assets/drawings/double-nauty.PNG",
       "photos": [
         {
           "src": "/assets/photos/doublenauty-hero.jpg",
@@ -86,9 +86,9 @@
       ],
       "awards": ["People's Choice - Coastal Arts Festival 2024"]
     },
-    "lemonchair": {
-      "id": "lemonchair",
-      "title": "Lemon Chair 2",
+    "lemon-chair-01": {
+      "id": "lemon-chair-01",
+      "title": "Lemon Chair 01",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
       "materials": "Bent plywood, natural lemon oil finish, brass hardware",
@@ -102,7 +102,7 @@
       "technicalNotes": "Constructed using steam-bent plywood techniques pioneered in Scandinavian furniture design. Multiple layers are laminated and formed over custom molds. The lemon oil finish is applied in seven thin coats, each hand-rubbed to achieve optimal depth and protection.",
       "inspiration": "This piece grows from our fascination with citrus forms - the way a lemon's curves are both mathematically precise and organically imperfect. The chair's flowing lines echo these natural geometries while providing exceptional ergonomic support.",
       "process": "The creation process begins with selecting premium plywood sheets. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, sanded through multiple grits, and finished by hand with our signature lemon oil blend.",
-      "drawingPath": "/assets/drawings/Lemonchair2.PNG",
+      "drawingPath": "/assets/drawings/lemon-chair-01.PNG",
       "photos": [
         {
           "src": "/assets/photos/lemonchair-hero.jpg",
@@ -128,12 +128,399 @@
         "Sustainable Design Showcase, San Francisco (2024)"
       ],
       "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
-    }
-  },
-  "metadata": {
+    },
+    "lemon-chair-02": {
+      "id": "lemon-chair-02",
+      "title": "Lemon Chair 2",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "Lemon Chair 2 represents the evolution of our exploration into organic forms and natural materials. This piece combines traditional woodworking techniques with contemporary design sensibilities, creating furniture that feels both timeless and thoroughly modern. The warm lemon oil finish enhances the natural grain while providing a subtle citrus aroma.",
+      "artistStatement": "The second iteration of our Lemon Chair series pushes further into the realm of sensory design. We believe furniture should engage multiple senses - the visual beauty of wood grain, the tactile pleasure of smooth curves, and yes, even a subtle olfactory experience that connects us to nature.",
+      "technicalNotes": "Constructed using steam-bent plywood techniques pioneered in Scandinavian furniture design. Multiple layers are laminated and formed over custom molds. The lemon oil finish is applied in seven thin coats, each hand-rubbed to achieve optimal depth and protection.",
+      "inspiration": "This piece grows from our fascination with citrus forms - the way a lemon's curves are both mathematically precise and organically imperfect. The chair's flowing lines echo these natural geometries while providing exceptional ergonomic support.",
+      "process": "The creation process begins with selecting premium plywood sheets. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, sanded through multiple grits, and finished by hand with our signature lemon oil blend.",
+      "drawingPath": "/assets/drawings/lemon-chair-02.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "column-pieces": {
+      "id": "column-pieces",
+      "title": "Column Pieces",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/column-pieces.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "continuity-drift": {
+      "id": "continuity-drift",
+      "title": "Continuity Drift",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/continuity-drift.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "nautilus-sectional": {
+      "id": "nautilus-sectional",
+      "title": "Nautilus Sectional",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/nautilus-sectional.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "shapes-chair": {
+      "id": "shapes-chair",
+      "title": "Shapes Chair",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/shapes-chair.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "spire-pillow": {
+      "id": "spire-pillow",
+      "title": "Spire Pillow",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/spire-pillow.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "toasted-ball-chair": {
+      "id": "toasted-ball-chair",
+      "title": "Toasted Ball Chair",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/toasted-ball-chair.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "vanitas-vase": {
+      "id": "vanitas-vase",
+      "title": "Vanitas Vase",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/vanitas-vase.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "verdant-love-lovey": {
+      "id": "verdant-love-lovey",
+      "title": "Verdant Love Lovey",
+      "artist": "SCULPTURELANDIA Collective",
+      "year": "2024",
+      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
+      "weight": "28 lbs (12.7 kg)",
+      "price": "$1,800",
+      "availability": "Available",
+      "edition": "Series of 12",
+      "description": "placeholder",
+      "artistStatement": "placeholder",
+      "technicalNotes": "placeholder",
+      "inspiration": "placeholder",
+      "process": "placeholder",
+      "drawingPath": "/assets/drawings/verdant-love-lovey.PNG",
+      "photos": [
+        {
+          "src": "/assets/photos/lemonchair-hero.jpg",
+          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+        },
+        {
+          "src": "/assets/photos/lemonchair-detail.jpg",
+          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "caption": "Steam-bent plywood construction detail"
+        },
+        {
+          "src": "/assets/photos/lemonchair-pair.jpg",
+          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+        }
+      ],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "featured": false,
+      "dateCreated": "2024-01-10",
+      "exhibitions": [
+        "Wood & Form Exhibition, Portland (2024)",
+        "Sustainable Design Showcase, San Francisco (2024)"
+      ],
+      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+    },
+    "metadata": {
     "lastUpdated": "2024-09-14",
     "version": "1.0.0",
     "totalSculptures": 3,
     "curator": "SCULPTURELANDIA Content Team"
   }
+}
 }

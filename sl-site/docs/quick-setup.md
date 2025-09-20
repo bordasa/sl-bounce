@@ -104,3 +104,4 @@ npm run dev
 3. Add real content and photos in Phase 6
 
 This setup creates the complete foundation for the SCULPTURELANDIA interactive gallery.
+
