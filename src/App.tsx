@@ -444,6 +444,7 @@ const HomePage: React.FC = () => {
           <img
             src={entity.src}
             alt={entity.alt}
+            loading="lazy"
             style={{
               width: '100%',
               height: '100%',
@@ -573,6 +574,7 @@ const SculpturePage: React.FC = () => {
           <img
             src={sculpture.drawingPath}
             alt={`${sculpture.title} sculpture drawing`}
+            loading="lazy"
             style={{
               maxWidth: '100%',
               maxHeight: '400px',
