@@ -11,30 +11,30 @@
       "price": "$2,400",
       "availability": "Available",
       "edition": "Limited edition of 25",
-      "description": "The Ball Chair represents a bold exploration of geometric comfort and spatial intimacy. This iconic piece challenges conventional seating design by creating a cocoon-like environment that offers both privacy and openness. The spherical form, inspired by mid-century modern principles, transforms the act of sitting into an immersive experience.",
-      "artistStatement": "In creating the Ball Chair, we sought to redefine personal space within public environments. The curved interior creates an acoustic sanctuary, while the bold exterior form makes a powerful sculptural statement. Each piece is individually crafted with attention to both aesthetic impact and ergonomic comfort.",
+      "description": "The Atom Chair represents a bold exploration of geometric comfort and spatial intimacy. This iconic piece challenges conventional seating design by creating a cocoon-like environment that offers both privacy and openness. The spherical form, inspired by mid-century modern principles, transforms the act of sitting into an immersive experience.",
+      "artistStatement": "In creating the Atom Chair, we sought to redefine personal space within public environments. The curved interior creates an acoustic sanctuary, while the bold exterior form makes a powerful sculptural statement. Each piece is individually crafted with attention to both aesthetic impact and ergonomic comfort.",
       "technicalNotes": "Hand-welded steel frame with precision powder coating. Interior features multi-density foam layers for optimal comfort. Swivel base allows 360-degree rotation. Upholstery available in curated selection of premium fabrics.",
-      "inspiration": "Born from observing soap bubbles and their perfect geometric forms, the Ball Chair embodies the tension between containment and freedom. The piece invites contemplation while serving as functional art.",
+      "inspiration": "Born from observing soap bubbles and their perfect geometric forms, the Atom Chair embodies the tension between containment and freedom. The piece invites contemplation while serving as functional art.",
       "process": "Each chair begins with hand-formed steel tubing, welded and finished in our workshop. The upholstery process involves traditional techniques combined with modern materials to ensure longevity and comfort.",
       "drawingPath": "/assets/drawings-transparent/atom-chair.png",
       "photos": [
         {
-          "src": "/assets/photos/ballchair-hero.jpg",
-          "alt": "Ball Chair in minimalist gallery setting",
-          "caption": "Studio photography showcasing the iconic silhouette"
+          "src": "/assets/photos/atomchair-hero.jpg",
+          "alt": "Atom Chair in minimalist gallery setting",
+          "caption": "Studio photography showcasing the iconic spherical silhouette"
         },
         {
-          "src": "/assets/photos/ballchair-detail.jpg",
-          "alt": "Close-up detail of Ball Chair upholstery and steel frame",
+          "src": "/assets/photos/atomchair-detail.jpg",
+          "alt": "Close-up detail of Atom Chair upholstery and steel frame",
           "caption": "Hand-stitched upholstery detail and powder-coated frame"
         },
         {
-          "src": "/assets/photos/ballchair-in-use.jpg",
-          "alt": "Ball Chair being used in modern living space",
-          "caption": "The Ball Chair in its natural environment"
+          "src": "/assets/photos/atomchair-in-use.jpg",
+          "alt": "Atom Chair being used in modern living space",
+          "caption": "The Atom Chair in its natural environment"
         }
       ],
-      "tags": ["seating", "modern", "steel", "comfort", "iconic", "mid-century"],
+      "tags": ["seating", "modern", "steel", "comfort", "iconic", "mid-century", "spherical"],
       "featured": true,
       "dateCreated": "2023-08-15",
       "exhibitions": [
@@ -97,30 +97,30 @@
       "price": "$1,800",
       "availability": "Available",
       "edition": "Series of 12",
-      "description": "Lemon Chair 2 represents the evolution of our exploration into organic forms and natural materials. This piece combines traditional woodworking techniques with contemporary design sensibilities, creating furniture that feels both timeless and thoroughly modern. The warm lemon oil finish enhances the natural grain while providing a subtle citrus aroma.",
-      "artistStatement": "The second iteration of our Lemon Chair series pushes further into the realm of sensory design. We believe furniture should engage multiple senses - the visual beauty of wood grain, the tactile pleasure of smooth curves, and yes, even a subtle olfactory experience that connects us to nature.",
-      "technicalNotes": "Constructed using steam-bent plywood techniques pioneered in Scandinavian furniture design. Multiple layers are laminated and formed over custom molds. The lemon oil finish is applied in seven thin coats, each hand-rubbed to achieve optimal depth and protection.",
-      "inspiration": "This piece grows from our fascination with citrus forms - the way a lemon's curves are both mathematically precise and organically imperfect. The chair's flowing lines echo these natural geometries while providing exceptional ergonomic support.",
-      "process": "The creation process begins with selecting premium plywood sheets. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, sanded through multiple grits, and finished by hand with our signature lemon oil blend.",
+      "description": "Lemon Chair 01 marks the beginning of our exploration into citrus-inspired organic forms. This inaugural piece combines traditional Scandinavian woodworking techniques with contemporary sculptural sensibilities, creating furniture that engages multiple senses. The warm lemon oil finish not only enhances the natural wood grain but provides a subtle, uplifting citrus aroma.",
+      "artistStatement": "With the first Lemon Chair, we began our investigation into how furniture can transcend its utilitarian purpose to become a full sensory experience. The gentle curves mirror the mathematical perfection found in nature, while the lemon oil finish connects the user to the natural world through subtle olfactory engagement.",
+      "technicalNotes": "Constructed using traditional steam-bent plywood techniques. Multiple laminated layers are formed over custom molds to achieve the flowing curves. The lemon oil finish is applied in five hand-rubbed coats, each carefully cured to achieve the perfect balance of protection and aromatherapy.",
+      "inspiration": "Inspired by the perfect geometric curves of citrus fruits, particularly the way a lemon's form represents both mathematical precision and organic spontaneity. The chair's silhouette echoes these natural geometries while providing exceptional ergonomic support.",
+      "process": "The creation begins with selecting premium Baltic birch plywood. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, then sanded through seven progressive grits before receiving our signature lemon oil treatment.",
       "drawingPath": "/assets/drawings-transparent/lemon-chair-01.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
+          "src": "/assets/photos/lemonchair01-hero.jpg",
+          "alt": "Lemon Chair 01 in natural lighting showing wood grain",
           "caption": "Natural lighting reveals the beautiful wood grain patterns"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
+          "src": "/assets/photos/lemonchair01-detail.jpg",
+          "alt": "Close-up of Lemon Chair 01 bent plywood construction",
           "caption": "Steam-bent plywood construction detail"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/lemonchair01-profile.jpg",
+          "alt": "Profile view of Lemon Chair 01 showing ergonomic curve",
+          "caption": "Profile highlighting the chair's ergonomic design"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining", "citrus", "aromatherapy"],
       "featured": false,
       "dateCreated": "2024-01-10",
       "exhibitions": [
@@ -131,396 +131,396 @@
     },
     "lemon-chair-02": {
       "id": "lemon-chair-02",
-      "title": "Lemon Chair 2",
+      "title": "Lemon Chair 02",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
+      "materials": "Bent plywood, enhanced lemon oil finish, brass hardware",
       "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
       "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "price": "$1,950",
       "availability": "Available",
       "edition": "Series of 12",
-      "description": "Lemon Chair 2 represents the evolution of our exploration into organic forms and natural materials. This piece combines traditional woodworking techniques with contemporary design sensibilities, creating furniture that feels both timeless and thoroughly modern. The warm lemon oil finish enhances the natural grain while providing a subtle citrus aroma.",
-      "artistStatement": "The second iteration of our Lemon Chair series pushes further into the realm of sensory design. We believe furniture should engage multiple senses - the visual beauty of wood grain, the tactile pleasure of smooth curves, and yes, even a subtle olfactory experience that connects us to nature.",
-      "technicalNotes": "Constructed using steam-bent plywood techniques pioneered in Scandinavian furniture design. Multiple layers are laminated and formed over custom molds. The lemon oil finish is applied in seven thin coats, each hand-rubbed to achieve optimal depth and protection.",
-      "inspiration": "This piece grows from our fascination with citrus forms - the way a lemon's curves are both mathematically precise and organically imperfect. The chair's flowing lines echo these natural geometries while providing exceptional ergonomic support.",
-      "process": "The creation process begins with selecting premium plywood sheets. Steam bending requires precise temperature and humidity control. Each chair is individually shaped, sanded through multiple grits, and finished by hand with our signature lemon oil blend.",
+      "description": "Lemon Chair 02 represents the evolution of our citrus-inspired design language. Building upon the foundation of the first piece, this iteration refines the sensory experience with an enhanced lemon oil finish that provides a more pronounced aromatic presence while maintaining the elegant visual appeal of natural wood grain.",
+      "artistStatement": "The second iteration pushes further into the realm of multi-sensory design. We refined our understanding of how furniture can engage not just touch and sight, but also smell, creating a more complete interaction between user and object. The enhanced finish creates a subtle but persistent connection to nature.",
+      "technicalNotes": "Advanced steam-bending techniques with improved mold precision. The enhanced lemon oil finish incorporates natural citrus essential oils for longer-lasting aroma while maintaining wood protection. Brass hardware is hand-polished and sealed against patina.",
+      "inspiration": "Continuing the citrus theme, this piece draws inspiration from Meyer lemons - sweeter and more aromatic than traditional lemons. The slightly more pronounced curves reflect this inspiration while maintaining the ergonomic excellence of the original design.",
+      "process": "Similar construction to Chair 01 but with refined techniques learned from the first edition. The enhanced oil finish requires a longer curing process, with seven thin coats applied over two weeks to achieve optimal aroma retention and wood protection.",
       "drawingPath": "/assets/drawings-transparent/lemon-chair-02.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/lemonchair02-hero.jpg",
+          "alt": "Lemon Chair 02 in natural lighting showing enhanced finish",
+          "caption": "Enhanced lemon oil finish creating warm, inviting tones"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/lemonchair02-detail.jpg",
+          "alt": "Close-up of Lemon Chair 02 brass hardware detail",
+          "caption": "Hand-polished brass hardware and wood grain detail"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/lemonchair02-pair.jpg",
+          "alt": "Two Lemon Chair 02 pieces in modern dining setting",
+          "caption": "Pair of Lemon Chair 02s in contemporary dining environment"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining", "citrus", "enhanced"],
       "featured": false,
-      "dateCreated": "2024-01-10",
+      "dateCreated": "2024-02-15",
       "exhibitions": [
         "Wood & Form Exhibition, Portland (2024)",
         "Sustainable Design Showcase, San Francisco (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Innovation in Materials - Wood & Form 2024"]
     },
     "column-pieces": {
       "id": "column-pieces",
       "title": "Column Pieces",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Cast concrete, oxidized steel inserts, natural aggregate",
+      "dimensions": "72\" × 18\" × 18\" (183cm × 46cm × 46cm)",
+      "weight": "340 lbs (154 kg)",
+      "price": "$4,800",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Series of 5",
+      "description": "Column Pieces explores the architectural heritage of classical columns through a contemporary lens. These monumental forms reference ancient Greek and Roman architecture while incorporating modern materials and finishing techniques. The oxidized steel inserts create visual tension against the smooth concrete, suggesting both permanence and decay.",
+      "artistStatement": "We sought to examine how classical architectural elements can speak to contemporary spaces. These pieces question the boundary between architecture and sculpture, between support and art. The oxidation process represents time's passage - how even the most permanent structures evolve and change.",
+      "technicalNotes": "Cast using high-performance concrete with natural river aggregate for texture. Oxidized steel inserts are pre-weathered using controlled salt spray techniques. Each column is cast in custom molds with precision alignment systems for the steel elements.",
+      "inspiration": "Inspired by visits to ancient ruins where we observed how time transforms rigid architectural elements into organic, sculptural forms. The interplay between the eternal aspirations of classical architecture and the inevitable effects of time fascinated us.",
+      "process": "Each column begins with steel insert preparation - cutting, shaping, and controlled oxidation over several weeks. Concrete casting requires precise timing and temperature control. Final finishing involves careful grinding to expose aggregate while preserving the steel details.",
       "drawingPath": "/assets/drawings-transparent/column-pieces.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/columnpieces-hero.jpg",
+          "alt": "Column Pieces in gallery setting showing full height",
+          "caption": "Gallery installation emphasizing monumental scale"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/columnpieces-detail.jpg",
+          "alt": "Close-up of Column Pieces showing oxidized steel detail",
+          "caption": "Oxidized steel insert detail against smooth concrete"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/columnpieces-outdoor.jpg",
+          "alt": "Column Pieces in outdoor architectural setting",
+          "caption": "Outdoor installation demonstrating architectural dialogue"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
-      "featured": false,
-      "dateCreated": "2024-01-10",
+      "tags": ["concrete", "steel", "architectural", "monumental", "classical", "contemporary", "outdoor"],
+      "featured": true,
+      "dateCreated": "2024-05-20",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Architectural Dialogues, Chicago (2024)",
+        "Concrete & Steel Symposium, Los Angeles (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Best Large Scale Work - Architectural Arts Awards 2024"]
     },
     "continuity-drift": {
       "id": "continuity-drift",
       "title": "Continuity Drift",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Welded bronze, patinated surface, rotating mechanism",
+      "dimensions": "36\" × 24\" × 42\" (91cm × 61cm × 107cm)",
+      "weight": "95 lbs (43 kg)",
+      "price": "$5,200",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Unique piece",
+      "description": "Continuity Drift captures the paradox of change within permanence. This kinetic sculpture slowly rotates, creating an ever-shifting play of light and shadow across its patinated bronze surface. The piece invites contemplation of time's passage and the subtle transformations that occur in moments of apparent stillness.",
+      "artistStatement": "We are fascinated by the Buddhist concept of impermanence - how everything is in constant flux despite appearances of stability. This piece embodies that philosophy, using almost imperceptible movement to reveal how perspective continuously shapes our understanding of form and space.",
+      "technicalNotes": "Constructed from bronze sheets welded to create flowing, interconnected forms. The patination process uses traditional liver of sulfur techniques combined with selective heat application. The rotation mechanism is precision-engineered to complete one revolution every 8 hours.",
+      "inspiration": "Inspired by watching clouds drift across the sky - seemingly static when observed momentarily, but revealing constant transformation over time. The title reflects this duality between continuity and change that defines our existence.",
+      "process": "Bronze working begins with hammer-forming individual elements, then welding to create the complete form. Patination requires multiple applications over several weeks. The rotation mechanism is custom-engineered and tested for smooth, silent operation over years of continuous movement.",
       "drawingPath": "/assets/drawings-transparent/continuity-drift.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/continuitydrift-hero.jpg",
+          "alt": "Continuity Drift showing light play across bronze surface",
+          "caption": "Dynamic light patterns created by the sculpture's rotation"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/continuitydrift-detail.jpg",
+          "alt": "Close-up of Continuity Drift patinated bronze texture",
+          "caption": "Hand-applied patina creating rich surface variations"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/continuitydrift-motion.jpg",
+          "alt": "Time-lapse showing Continuity Drift rotation pattern",
+          "caption": "Long exposure capturing the sculpture's subtle movement"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
-      "featured": false,
-      "dateCreated": "2024-01-10",
+      "tags": ["bronze", "kinetic", "patinated", "meditation", "time", "movement", "philosophy"],
+      "featured": true,
+      "dateCreated": "2024-06-10",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Kinetic Arts Festival, Seattle (2024)",
+        "Meditation in Motion, San Francisco (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Excellence in Kinetic Sculpture - Northwest Arts Council 2024"]
     },
     "nautilus-sectional": {
       "id": "nautilus-sectional",
       "title": "Nautilus Sectional",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Molded fiberglass, nautical rope details, marine-grade cushions",
+      "dimensions": "84\" × 36\" × 30\" (213cm × 91cm × 76cm)",
+      "weight": "125 lbs (57 kg)",
+      "price": "$6,800",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Limited edition of 8",
+      "description": "The Nautilus Sectional transforms the mathematical perfection of the golden spiral into comfortable, functional seating. This curved sectional follows the logarithmic spiral found in nautilus shells, creating a naturally flowing form that encourages both intimate conversation and solitary contemplation.",
+      "artistStatement": "Nature provides the most elegant solutions to complex design challenges. The nautilus shell's spiral represents thousands of years of evolutionary refinement - we sought to translate that perfection into human-scale furniture that honors both function and the inherent beauty of mathematical forms.",
+      "technicalNotes": "Molded fiberglass construction using yacht-building techniques for strength and weather resistance. Marine-grade cushions are removable for easy maintenance. Nautical rope details are both decorative and functional, providing textural contrast and handholds.",
+      "inspiration": "The chambered nautilus shell, with its perfect logarithmic spiral, represents one of nature's most beautiful expressions of mathematical principles. We were particularly drawn to how the spiral creates both strength and elegance.",
+      "process": "Construction begins with creating a full-scale spiral template based on golden ratio calculations. Fiberglass molding uses multiple layers for optimal strength-to-weight ratio. Each piece is hand-finished and the rope work is done using traditional maritime knot techniques.",
       "drawingPath": "/assets/drawings-transparent/nautilus-sectional.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/nautilussectional-hero.jpg",
+          "alt": "Nautilus Sectional showing full spiral curve",
+          "caption": "Complete spiral form demonstrating golden ratio proportions"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/nautilussectional-detail.jpg",
+          "alt": "Close-up of Nautilus Sectional rope work and cushion detail",
+          "caption": "Maritime rope work and marine-grade cushion details"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/nautilussectional-use.jpg",
+          "alt": "Nautilus Sectional in use in modern coastal home",
+          "caption": "Sectional in natural environment encouraging conversation"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
-      "featured": false,
-      "dateCreated": "2024-01-10",
+      "tags": ["fiberglass", "sectional", "spiral", "nautical", "golden-ratio", "marine", "mathematics"],
+      "featured": true,
+      "dateCreated": "2024-04-15",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Mathematical Beauty in Design, Boston (2024)",
+        "Coastal Living Expo, Miami (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Innovation in Functional Art - Design Miami 2024"]
     },
     "shapes-chair": {
       "id": "shapes-chair",
       "title": "Shapes Chair",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Powder-coated aluminum, geometric foam inserts, technical fabric",
+      "dimensions": "28\" × 30\" × 34\" (71cm × 76cm × 86cm)",
+      "weight": "32 lbs (14.5 kg)",
+      "price": "$2,200",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Series of 20",
+      "description": "Shapes Chair deconstructs the traditional chair form into its essential geometric components, then reassembles them in unexpected ways. This piece challenges perceptions of what constitutes proper seating by creating comfort through seemingly angular, unforgiving forms that reveal their ergonomic intelligence through use.",
+      "artistStatement": "We wanted to explore whether geometric abstraction could achieve the same comfort as organic curves. The chair became an experiment in how angular forms, when precisely calculated and positioned, can support the human body as effectively as traditional curved designs.",
+      "technicalNotes": "Laser-cut aluminum frame powder-coated for durability and color retention. Geometric foam inserts are precision-cut using CNC technology and upholstered in high-performance technical fabrics. Each angle is calculated for optimal weight distribution and support.",
+      "inspiration": "Inspired by Bauhaus design principles and the work of geometric abstractionists like Donald Judd. We were interested in how pure geometric forms could be both visually striking and functionally superior.",
+      "process": "Design begins with 3D modeling to optimize angles for ergonomic support. Aluminum cutting uses precision laser technology. Assembly requires careful alignment of all geometric elements. Final testing involves extensive user trials to refine comfort factors.",
       "drawingPath": "/assets/drawings-transparent/shapes-chair.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/shapeschair-hero.jpg",
+          "alt": "Shapes Chair showing geometric angular design",
+          "caption": "Geometric composition creating unexpected comfort"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/shapeschair-detail.jpg",
+          "alt": "Close-up of Shapes Chair aluminum frame construction",
+          "caption": "Precision laser-cut aluminum frame detail"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/shapeschair-office.jpg",
+          "alt": "Shapes Chair in modern office environment",
+          "caption": "Professional setting highlighting the chair's contemporary aesthetic"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["aluminum", "geometric", "angular", "bauhaus", "modern", "ergonomic", "technical"],
       "featured": false,
-      "dateCreated": "2024-01-10",
+      "dateCreated": "2024-03-05",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Geometric Forms in Furniture, New York (2024)",
+        "Contemporary Seating Design, Milan (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Design Innovation Award - Milan Furniture Fair 2024"]
     },
     "spire-pillow": {
       "id": "spire-pillow",
       "title": "Spire Pillow",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Memory foam core, organic cotton cover, hand-embroidered details",
+      "dimensions": "18\" × 18\" × 24\" (46cm × 46cm × 61cm)",
+      "weight": "4 lbs (1.8 kg)",
+      "price": "$320",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Series of 50",
+      "description": "Spire Pillow challenges conventional notions of comfort by creating a vertical resting experience. This sculptural pillow invites users to lean, embrace, or rest against its spire-like form, discovering new ways to find physical and psychological comfort in unexpected positions.",
+      "artistStatement": "We questioned why pillows must be flat rectangles designed only for horizontal rest. The Spire Pillow explores how vertical forms can provide support and comfort while creating a meditative focal point in living spaces. It's about finding new ways to rest and reflect.",
+      "technicalNotes": "High-density memory foam core provides structural integrity while conforming to body contact. Organic cotton cover is removable and washable. Hand-embroidered details add textural interest and visual weight to anchor the vertical form.",
+      "inspiration": "Inspired by meditation cushions and ancient standing stones - objects that provide both physical support and spiritual grounding. The spire form suggests aspiration while offering earthly comfort.",
+      "process": "Memory foam is precision-cut using heated wire techniques to achieve the perfect taper. Cotton covers are sewn using traditional techniques, with embroidery added by hand. Each pillow undergoes comfort testing to ensure proper support characteristics.",
       "drawingPath": "/assets/drawings-transparent/spire-pillow.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/spirepillow-hero.jpg",
+          "alt": "Spire Pillow showing vertical meditation pose",
+          "caption": "Demonstrating meditative seating support"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/spirepillow-detail.jpg",
+          "alt": "Close-up of Spire Pillow hand-embroidered details",
+          "caption": "Hand-embroidered organic cotton surface detail"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/spirepillow-room.jpg",
+          "alt": "Spire Pillow in serene meditation space",
+          "caption": "Creating a focal point in contemplative interior"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["textile", "meditation", "comfort", "organic", "vertical", "pillow", "mindfulness"],
       "featured": false,
-      "dateCreated": "2024-01-10",
+      "dateCreated": "2024-07-20",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Textile Arts Collective, Portland (2024)",
+        "Mindful Living Expo, San Francisco (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Best Soft Goods Design - Textile Arts Awards 2024"]
     },
     "toasted-ball-chair": {
       "id": "toasted-ball-chair",
       "title": "Toasted Ball Chair",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Heat-treated oak, charred surface finish, linen upholstery",
+      "dimensions": "34\" × 32\" × 33\" (86cm × 81cm × 84cm)",
+      "weight": "52 lbs (23.6 kg)",
+      "price": "$3,600",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Limited edition of 15",
+      "description": "The Toasted Ball Chair explores the Japanese art of shou sugi ban, using controlled burning to create a distinctive charred wood finish. This spherical seating combines the comfort of traditional upholstery with the dramatic visual impact of fire-treated timber, creating a piece that is both primal and refined.",
+      "artistStatement": "Fire has always been humanity's tool for transformation. By embracing controlled burning, we create not just a protective surface but a powerful aesthetic statement. The contrast between the charred exterior and soft interior reflects the duality of human nature - tough exterior, tender heart.",
+      "technicalNotes": "White oak construction with traditional mortise and tenon joinery. Shou sugi ban technique involves controlled burning followed by wire brushing and oil finishing. Interior upholstery uses natural linen with down-alternative filling for comfort and sustainability.",
+      "inspiration": "Inspired by ancient Japanese preservation techniques and the beauty found in controlled destruction. We were fascinated by how fire could create such striking visual textures while actually protecting the wood from decay and insects.",
+      "process": "Sphere construction requires complex curved joinery techniques. The burning process demands precise timing and temperature control. Each chair is individually torched, creating unique char patterns. Final oiling brings out the dramatic contrast between charred and natural wood.",
       "drawingPath": "/assets/drawings-transparent/toasted-ball-chair.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/toastedballchair-hero.jpg",
+          "alt": "Toasted Ball Chair showing dramatic charred wood texture",
+          "caption": "Shou sugi ban technique creating dramatic surface texture"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/toastedballchair-detail.jpg",
+          "alt": "Close-up of Toasted Ball Chair charred wood and linen contrast",
+          "caption": "Contrast between charred oak exterior and soft linen interior"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/toastedballchair-interior.jpg",
+          "alt": "Toasted Ball Chair interior showing comfort and craftsmanship",
+          "caption": "Interior comfort contrasting with exterior drama"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
-      "featured": false,
-      "dateCreated": "2024-01-10",
+      "tags": ["oak", "charred", "shou-sugi-ban", "japanese", "fire", "linen", "spherical"],
+      "featured": true,
+      "dateCreated": "2024-08-10",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Fire & Wood: Ancient Techniques, Contemporary Forms (2024)",
+        "Japanese Craft Influence in Modern Design, Los Angeles (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Innovation in Traditional Techniques - Craft Council Awards 2024"]
     },
     "vanitas-vase": {
       "id": "vanitas-vase",
       "title": "Vanitas Vase",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Blown glass, etched surface details, oxidized copper base",
+      "dimensions": "12\" × 8\" × 16\" (30cm × 20cm × 41cm)",
+      "weight": "8 lbs (3.6 kg)",
+      "price": "$1,200",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Series of 25",
+      "description": "Vanitas Vase contemplates the fleeting nature of beauty and life through the traditional still-life symbol of the flower vessel. The etched glass surface suggests both clarity and decay, while the oxidized copper base grounds the ethereal glass form in earthly materiality and the inevitable passage of time.",
+      "artistStatement": "The vanitas tradition reminds us that all beauty is temporary. This vase serves as both functional object and philosophical reminder - it can hold fresh flowers that will inevitably wither, just as the copper base will continue its natural oxidation process over time.",
+      "technicalNotes": "Hand-blown glass using traditional techniques with selective etching to create surface texture that catches and diffuses light. The copper base is allowed to oxidize naturally, developing unique patina over time. Each vase exhibits subtle variations in form and surface treatment.",
+      "inspiration": "Inspired by Dutch vanitas paintings of the 17th century, which used symbolic objects to remind viewers of mortality and the transience of earthly pleasures. The vase embodies these themes while serving contemporary function.",
+      "process": "Glass blowing requires precise temperature control and timing. Etching is done by hand using traditional acid techniques. Copper bases are formed using traditional metalsmithing methods, then allowed to oxidize in controlled environments to develop distinctive patinas.",
       "drawingPath": "/assets/drawings-transparent/vanitas-vase.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/vanitasvase-hero.jpg",
+          "alt": "Vanitas Vase showing etched glass and oxidized copper base",
+          "caption": "Etched glass creating light diffusion over oxidized copper"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/vanitasvase-detail.jpg",
+          "alt": "Close-up of Vanitas Vase surface etching and patina",
+          "caption": "Hand-etched surface details and natural copper patina"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/vanitasvase-flowers.jpg",
+          "alt": "Vanitas Vase with flowers in contemplative still life",
+          "caption": "Functional beauty serving traditional vanitas symbolism"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["glass", "copper", "vanitas", "etched", "patina", "philosophical", "traditional"],
       "featured": false,
-      "dateCreated": "2024-01-10",
+      "dateCreated": "2024-09-01",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Contemporary Glass Arts, Seattle (2024)",
+        "Vanitas Revisited: Modern Interpretations, Philadelphia (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Excellence in Glass Arts - Pacific Northwest Glass Guild 2024"]
     },
     "verdant-love-lovey": {
       "id": "verdant-love-lovey",
       "title": "Verdant Love Lovey",
       "artist": "SCULPTURELANDIA Collective",
       "year": "2024",
-      "materials": "Bent plywood, natural lemon oil finish, brass hardware",
-      "dimensions": "30\" × 26\" × 32\" (76cm × 66cm × 81cm)",
-      "weight": "28 lbs (12.7 kg)",
-      "price": "$1,800",
+      "materials": "Living moss, preserved botanical elements, sustainable wood frame",
+      "dimensions": "24\" × 18\" × 6\" (61cm × 46cm × 15cm)",
+      "weight": "15 lbs (6.8 kg)",
+      "price": "$880",
       "availability": "Available",
-      "edition": "Series of 12",
-      "description": "placeholder",
-      "artistStatement": "placeholder",
-      "technicalNotes": "placeholder",
-      "inspiration": "placeholder",
-      "process": "placeholder",
+      "edition": "Series of 30",
+      "description": "Verdant Love Lovey blurs the line between sculpture and living system. This piece incorporates living moss and preserved botanical elements within a sustainable wood framework, creating a wall-mounted artwork that changes subtly over time, requiring minimal care while bringing the natural world indoors.",
+      "artistStatement": "In our increasingly digital world, we crave authentic connections to nature. This piece provides that connection through living elements that respond to their environment. It's about fostering relationships - between viewer and nature, between art and life, between permanence and change.",
+      "technicalNotes": "Sustainable wood frame houses a carefully balanced ecosystem of living moss and preserved botanicals. The system requires minimal maintenance - occasional misting and indirect light. Preserved elements provide textural contrast and structural support for the living moss.",
+      "inspiration": "Inspired by green walls and living architecture, but scaled for intimate domestic spaces. The title reflects both the love required to maintain living systems and the love they return through their presence and subtle transformations.",
+      "process": "Frame construction uses reclaimed wood with natural finishes. Moss installation requires understanding of species compatibility and growth patterns. Preserved botanical elements are selected for color harmony and longevity. Each piece includes care instructions and starter maintenance supplies.",
       "drawingPath": "/assets/drawings-transparent/verdant-love-lovey.png",
       "photos": [
         {
-          "src": "/assets/photos/lemonchair-hero.jpg",
-          "alt": "Lemon Chair 2 in natural lighting showing wood grain",
-          "caption": "Natural lighting reveals the beautiful wood grain patterns"
+          "src": "/assets/photos/verdantlovey-hero.jpg",
+          "alt": "Verdant Love Lovey showing living moss and botanical details",
+          "caption": "Living moss creating dynamic, ever-changing composition"
         },
         {
-          "src": "/assets/photos/lemonchair-detail.jpg",
-          "alt": "Close-up of Lemon Chair 2 bent plywood construction",
-          "caption": "Steam-bent plywood construction detail"
+          "src": "/assets/photos/verdantlovey-detail.jpg",
+          "alt": "Close-up of Verdant Love Lovey moss texture and wood frame",
+          "caption": "Intimate view of living moss texture and sustainable frame"
         },
         {
-          "src": "/assets/photos/lemonchair-pair.jpg",
-          "alt": "Two Lemon Chair 2 pieces in modern dining setting",
-          "caption": "Pair of Lemon Chairs in contemporary dining environment"
+          "src": "/assets/photos/verdantlovey-interior.jpg",
+          "alt": "Verdant Love Lovey installed in modern interior setting",
+          "caption": "Bringing natural elements into contemporary living space"
         }
       ],
-      "tags": ["wood", "plywood", "organic", "scandinavian", "handcrafted", "dining"],
+      "tags": ["living", "moss", "botanical", "sustainable", "natural", "ecosystem", "biophilic"],
       "featured": false,
-      "dateCreated": "2024-01-10",
+      "dateCreated": "2024-09-15",
       "exhibitions": [
-        "Wood & Form Exhibition, Portland (2024)",
-        "Sustainable Design Showcase, San Francisco (2024)"
+        "Living Art: Sustainable Sculptures, Portland (2024)",
+        "Biophilic Design Showcase, San Francisco (2024)"
       ],
-      "awards": ["Craftsmanship Excellence - Wood & Form 2024"]
+      "awards": ["Sustainability in Art Award - Green Arts Collective 2024"]
     },
     "metadata": {
-    "lastUpdated": "2024-09-14",
-    "version": "1.0.0",
-    "totalSculptures": 3,
-    "curator": "SCULPTURELANDIA Content Team"
+      "lastUpdated": "2024-09-20",
+      "version": "2.0.0",
+      "totalSculptures": 12,
+      "curator": "SCULPTURELANDIA Content Team"
+    }
   }
-}
 }
