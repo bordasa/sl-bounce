@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useParams } from 'react-router-dom';
 import sculptureData from './data/sculptures.json';
+import ViewAllPage from './components/ViewAllPage/ViewAllPage';
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu';
 
 console.log('App.tsx loading...');
 
@@ -52,148 +54,6 @@ const Header: React.FC = () => {
   );
 };
 
-// Hamburger Menu Component - Upper left corner
-const HamburgerMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <div style={{
-      position: 'fixed',
-      top: '16px',
-      left: '16px',
-      zIndex: 100
-    }}>
-      <button
-        onClick={toggleMenu}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          width: '32px',
-          height: '32px',
-          background: 'transparent',
-          border: 'none',
-          cursor: 'pointer',
-          padding: '4px',
-          borderRadius: '4px',
-          transition: 'all 0.2s ease'
-        }}
-        onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.05)'}
-        onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-      >
-        <div style={{ 
-          width: '100%', 
-          height: '3px', 
-          backgroundColor: '#000', 
-          marginBottom: '3px',
-          transition: 'all 0.3s ease',
-          transform: isOpen ? 'rotate(45deg) translateY(6px)' : 'rotate(0deg) translateY(0px)'
-        }}></div>
-        <div style={{ 
-          width: '100%', 
-          height: '3px', 
-          backgroundColor: '#000', 
-          marginBottom: '3px',
-          transition: 'all 0.3s ease',
-          opacity: isOpen ? '0' : '1'
-        }}></div>
-        <div style={{ 
-          width: '100%', 
-          height: '3px', 
-          backgroundColor: '#000',
-          transition: 'all 0.3s ease',
-          transform: isOpen ? 'rotate(-45deg) translateY(-6px)' : 'rotate(0deg) translateY(0px)'
-        }}></div>
-      </button>
-
-      {isOpen && (
-        <nav style={{
-          position: 'absolute',
-          top: '45px',
-          left: '0',
-          backgroundColor: 'white',
-          border: '1px solid #ddd',
-          borderRadius: '8px',
-          padding: '16px',
-          minWidth: '140px',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-          backdropFilter: 'blur(10px)'
-        }}>
-          <ul style={{ 
-            listStyle: 'none', 
-            margin: 0, 
-            padding: 0 
-          }}>
-            <li style={{ marginBottom: '12px' }}>
-              <button 
-                onClick={() => {
-                  window.location.href = '/';
-                  setIsOpen(false);
-                }}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: '#000',
-                  padding: '8px 0',
-                  width: '100%',
-                  textAlign: 'left',
-                  transition: 'color 0.2s ease'
-                }}
-                onMouseOver={(e) => e.currentTarget.style.color = '#666'}
-                onMouseOut={(e) => e.currentTarget.style.color = '#000'}
-              >
-                HOME
-              </button>
-            </li>
-            <li style={{ marginBottom: '12px' }}>
-              <button 
-                onClick={() => setIsOpen(false)}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: '#666',
-                  padding: '8px 0',
-                  width: '100%',
-                  textAlign: 'left'
-                }}
-              >
-                VIEW ALL
-              </button>
-            </li>
-            <li>
-              <button 
-                onClick={() => setIsOpen(false)}
-                style={{ 
-                  background: 'none', 
-                  border: 'none', 
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  fontWeight: '500',
-                  color: '#666',
-                  padding: '8px 0',
-                  width: '100%',
-                  textAlign: 'left'
-                }}
-              >
-                ABOUT
-              </button>
-            </li>
-          </ul>
-        </nav>
-      )}
-    </div>
-  );
-};
 
 // Sculpture data for physics system
 // Load sculpture data from JSON file
@@ -923,6 +783,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/sculpture/:id" element={<SculpturePage />} />
+          <Route path="/view-all" element={<ViewAllPage />} />
         </Routes>
       </div>
     </Router>
