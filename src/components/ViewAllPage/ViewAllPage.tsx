@@ -24,7 +24,7 @@ const ViewAllPage: React.FC = () => {
         </div>
 
         <div className="sculptures-list">
-          {sculptures.map((sculpture, index) => (
+          {sculptures.map((sculpture) => (
             <div
               key={sculpture.id}
               className="sculpture-item"
