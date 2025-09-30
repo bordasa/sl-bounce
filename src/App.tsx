@@ -417,13 +417,15 @@ const SculpturePage: React.FC = () => {
         ← Back to Gallery
       </button>
 
-      {/* Hero Section */}
+      {/* Hero Section - Coming Soon */}
       <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '60px',
-        marginBottom: '60px',
-        alignItems: 'center'
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        minHeight: '60vh',
+        gap: '40px'
       }}>
         {/* 2D Drawing */}
         <div style={{
@@ -436,8 +438,8 @@ const SculpturePage: React.FC = () => {
             alt={`${sculpture.title} sculpture drawing`}
             loading="lazy"
             style={{
-              maxWidth: '100%',
-              maxHeight: '400px',
+              maxWidth: '300px',
+              maxHeight: '300px',
               objectFit: 'contain',
               filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
               borderRadius: '12px'
@@ -445,10 +447,10 @@ const SculpturePage: React.FC = () => {
           />
         </div>
 
-        {/* Title and Description */}
+        {/* Title and Coming Soon Message */}
         <div>
           <h1 style={{
-            fontSize: '3rem',
+            fontSize: 'clamp(2rem, 5vw, 4rem)',
             fontWeight: 'bold',
             color: '#000',
             marginBottom: '24px',
@@ -457,292 +459,28 @@ const SculpturePage: React.FC = () => {
             {sculpture.title}
           </h1>
           
-          <p style={{
-            fontSize: '1.25rem',
-            lineHeight: '1.6',
-            color: '#666',
-            marginBottom: '32px'
-          }}>
-            {sculpture.description}
-          </p>
-          
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '24px'
+            fontSize: '1.5rem',
+            fontWeight: '300',
+            color: '#666',
+            marginBottom: '16px',
+            letterSpacing: '0.5px'
           }}>
-            {hasContent(sculpture.artist) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Artist
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.artist}</p>
-              </div>
-            )}
-            
-            {hasContent(sculpture.year) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Year
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.year}</p>
-              </div>
-            )}
-            
-            {hasContent(sculpture.materials) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Materials
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.materials}</p>
-              </div>
-            )}
-            
-            {hasContent(sculpture.dimensions) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Dimensions
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.dimensions}</p>
-              </div>
-            )}
-            
-            {hasContent(sculpture.price) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Price
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.price}</p>
-              </div>
-            )}
-            
-            {hasContent(sculpture.availability) && (
-              <div>
-                <h3 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#000', marginBottom: '8px' }}>
-                  Availability
-                </h3>
-                <p style={{ color: '#666' }}>{sculpture.availability}</p>
-              </div>
-            )}
+            Coming Soon
           </div>
+          
+          <p style={{
+            fontSize: '1rem',
+            lineHeight: '1.6',
+            color: '#999',
+            maxWidth: '600px',
+            margin: '0 auto'
+          }}>
+            Detailed information and gallery photos for this piece are coming soon. 
+            Please come back soon to see more from SCULPTURELANDIA.
+          </p>
         </div>
       </div>
-
-      {/* Artist Statement and Details - only show if any content exists */}
-      {(hasContent(sculpture.artistStatement) || hasContent(sculpture.inspiration) || hasContent(sculpture.process) || hasContent(sculpture.technicalNotes)) && (
-        <section style={{ marginBottom: '60px' }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '60px',
-            marginBottom: '40px'
-          }}>
-            <div>
-              {/* Artist Statement - only show if content exists */}
-              {hasContent(sculpture.artistStatement) && (
-                <>
-                  <h2 style={{
-                    fontSize: '1.5rem',
-                    fontWeight: 'bold',
-                    color: '#000',
-                    marginBottom: '16px'
-                  }}>
-                    Artist Statement
-                  </h2>
-                  <p style={{
-                    fontSize: '1rem',
-                    lineHeight: '1.6',
-                    color: '#666',
-                    marginBottom: '24px'
-                  }}>
-                    {sculpture.artistStatement}
-                  </p>
-                </>
-              )}
-              
-              {/* Inspiration - only show if content exists */}
-              {hasContent(sculpture.inspiration) && (
-                <>
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 'bold',
-                    color: '#000',
-                    marginBottom: '12px'
-                  }}>
-                    Inspiration
-                  </h3>
-                  <p style={{
-                    fontSize: '1rem',
-                    lineHeight: '1.6',
-                    color: '#666'
-                  }}>
-                    {sculpture.inspiration}
-                  </p>
-                </>
-              )}
-            </div>
-            
-            <div>
-              {/* Creative Process - only show if content exists */}
-              {hasContent(sculpture.process) && (
-                <>
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 'bold',
-                    color: '#000',
-                    marginBottom: '12px'
-                  }}>
-                    Creative Process
-                  </h3>
-                  <p style={{
-                    fontSize: '1rem',
-                    lineHeight: '1.6',
-                    color: '#666',
-                    marginBottom: '24px'
-                  }}>
-                    {sculpture.process}
-                  </p>
-                </>
-              )}
-              
-              {/* Technical Notes - only show if content exists */}
-              {hasContent(sculpture.technicalNotes) && (
-                <>
-                  <h3 style={{
-                    fontSize: '1.25rem',
-                    fontWeight: 'bold',
-                    color: '#000',
-                    marginBottom: '12px'
-                  }}>
-                    Technical Notes
-                  </h3>
-                  <p style={{
-                    fontSize: '1rem',
-                    lineHeight: '1.6',
-                    color: '#666'
-                  }}>
-                    {sculpture.technicalNotes}
-                  </p>
-                </>
-              )}
-            </div>
-          </div>
-          
-          {/* Exhibition History */}
-          {hasContent(sculpture.exhibitions) && (
-            <div style={{
-              borderTop: '1px solid #eee',
-              paddingTop: '32px',
-              marginBottom: '32px'
-            }}>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: 'bold',
-                color: '#000',
-                marginBottom: '16px'
-              }}>
-                Exhibition History
-              </h3>
-              <ul style={{
-                listStyle: 'disc',
-                paddingLeft: '24px',
-                color: '#666',
-                lineHeight: '1.6'
-              }}>
-                  {sculpture.exhibitions.map((exhibition: string, index: number) => (
-                  <li key={index} style={{ marginBottom: '8px' }}>
-                    {exhibition}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-          
-          {/* Awards */}
-          {hasContent(sculpture.awards) && (
-            <div>
-              <h3 style={{
-                fontSize: '1.25rem',
-                fontWeight: 'bold',
-                color: '#000',
-                marginBottom: '16px'
-              }}>
-                Recognition
-              </h3>
-              <ul style={{
-                listStyle: 'disc',
-                paddingLeft: '24px',
-                color: '#666',
-                lineHeight: '1.6'
-              }}>
-                  {sculpture.awards.map((award: string, index: number) => (
-                  <li key={index} style={{ marginBottom: '8px' }}>
-                    {award}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </section>
-      )}
-
-      {/* Photo Gallery Section - only show if photos exist */}
-      {hasContent(sculpture.photos) && (
-        <section style={{ marginBottom: '60px' }}>
-          <h2 style={{
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            color: '#000',
-            marginBottom: '32px',
-            textAlign: 'center'
-          }}>
-            Sculpture Photography
-          </h2>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '24px'
-          }}>
-                {sculpture.photos.map((photo: any, index: number) => (
-              <div
-                key={index}
-                style={{
-                  aspectRatio: '4/3',
-                  backgroundColor: '#f5f5f5',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  border: '2px dashed #ddd',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#999',
-                  fontSize: '0.9rem',
-                  textAlign: 'center',
-                  padding: '20px'
-                }}
-              >
-                {/* Photo placeholder with metadata */}
-                <div>
-                  <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
-                    Photo Placeholder
-                  </div>
-                  <div style={{ fontSize: '0.8rem', lineHeight: '1.4' }}>
-                    {photo.caption}
-                  </div>
-                  <div style={{ 
-                    fontSize: '0.7rem', 
-                    marginTop: '8px',
-                    color: '#aaa'
-                  }}>
-                    Path: {photo.src}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* Navigation */}
       <div style={{
