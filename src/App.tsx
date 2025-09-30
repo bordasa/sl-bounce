@@ -330,12 +330,6 @@ const HomePage: React.FC = () => {
   );
 };
 
-// Helper function to check if content exists and is not empty
-const hasContent = (value: any): boolean => {
-  if (Array.isArray(value)) return value.length > 0;
-  if (typeof value === 'string') return value.trim().length > 0;
-  return value != null && value !== '';
-};
 
 // Individual Sculpture Page Component
 const SculpturePage: React.FC = () => {
@@ -476,7 +470,7 @@ const SculpturePage: React.FC = () => {
             maxWidth: '600px',
             margin: '0 auto'
           }}>
-            Detailed information and gallery photos for this piece are coming soon. 
+            Detailed information and gallery photos for this piece are being updated. 
             Please come back soon to see more from SCULPTURELANDIA.
           </p>
         </div>
